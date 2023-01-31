@@ -1,9 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Template</title>
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/scripts.js"></script>
+  <title>pig-dice</title>
 </head>
 <body>
-  
+  <h1>Pig Die</h1>
+  <div id = "scoreboard">
+    <div id ="player-name-1">Player: </div>
+    <span>Total Score: </span><span id ="total-score">total s</span><br>
+    <!-- <div id ="player-name-2" class = "hidden">Player Name 2</div> -->
+    <span>Round: </span><span id ="round">round</span>
+  </div>
+  <div id = "playing-area">
+    die roll<br>
+    <br>
+    <button id = "stay-button">stay</button><br>
+    <button id = "roll-button">roll</button>
+    <div id="die"></div> 
+    <div id= "round-score"></div>
+  </div>
 </body>
 </html>
