@@ -1,13 +1,7 @@
-import {Game, Player} from "./pig-dice-BL";
+import Player from "./pig-dice-BL";
 //import 'bootstrap';
 //import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-
-//temp console
-export const game = new Game();
-const player1 = new Player("James");
-game.addPlayer(player1);
-
 
 //UI
 //function goRed() {
@@ -16,13 +10,13 @@ game.addPlayer(player1);
 window.addEventListener("load", function(e){
   e.preventDefault();
   let p1Nameplate = document.getElementById("player-name-1");
-  p1Nameplate.append(game.players[1].pName);
+  p1Nameplate.append(player1.players[1].pName);
   document.getElementById("roll-button").addEventListener("click", function() {
-    game.players[1].turn();
+    player1.players[1].turn();
     document.getElementById("die").style.backgroundColor = "white";
   });  
   this.document.getElementById("stay-button").addEventListener("click", function() {
     document.getElementById("die").style.backgroundColor = "white";
-    game.players[1].stay();
+    player1.players[1].stay();
   });
 });
