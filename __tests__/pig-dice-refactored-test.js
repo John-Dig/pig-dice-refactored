@@ -8,7 +8,7 @@ describe('Player', () => {
     expect(playerA.pName).toEqual("Richard");
     expect(playerA.pTotalScore).toEqual(0);
     expect(playerA.turnCounter).toEqual(1);
-    expect(playerA.rolled).toEqual(1);
+    expect(playerA.rolled).toEqual(0);
   });
 });
 
