@@ -1,4 +1,4 @@
-import fGame from "index.js";
+import game from "./index.js";
 
 //Die Roll
 Game.prototype.roll =function() {
@@ -37,16 +37,16 @@ export function Player(pName) {
 
 //playing game--------------------turn()
 Player.prototype.turn =function() {
-  this.rolled = fGame.roll();
+  this.rolled = game.roll();
   if (this.rolled === 1) {
     //goRed();
     this.turnCounter +=1; 
     this.pScore = 0;
-    fGame.updateScore();
+    game.updateScore();
   }
   else if (this.rolled > 1) {
     this.pScore += this.rolled;
-    fGame.updateScore();
+    game.updateScore();
   }
 };  
 
@@ -58,15 +58,15 @@ Player.prototype.stay = function(){
   this.pScore = 0;
   this.rolled = 0;
   this.turnCounter += 1;
-  fGame.updateScore();
+  game.updateScore();
 };
 
 
 
 //update score
 Game.prototype.updateScore =function(){
-  document.getElementById("total-score").innerText = fGame.players[1].pTotalScore;
-  document.getElementById("round").innerText = fGame.players[1].turnCounter;
-  document.getElementById("round-score").innerText = fGame.players[1].pScore;
-  document.getElementById("die").innerText = fGame.players[1].rolled;
+  document.getElementById("total-score").innerText = game.players[1].pTotalScore;
+  document.getElementById("round").innerText = game.players[1].turnCounter;
+  document.getElementById("round-score").innerText = game.players[1].pScore;
+  document.getElementById("die").innerText = game.players[1].rolled;
 };
