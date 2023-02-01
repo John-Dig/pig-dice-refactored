@@ -7,6 +7,12 @@ export default function Player(pName) {
   this.turnCounter = 1;
   this.rolled = 0;
 }
+//method roll
+Player.prototype.roll =function() {
+  let rollR;
+  rollR = Math.ceil(Math.random() * 6);
+  return rollR;
+};
 //method turn()
 Player.prototype.turn =function() {
   this.rolled = player1.roll();
@@ -21,12 +27,6 @@ Player.prototype.turn =function() {
     player1.updateScore();
   }
 };  
-//method die
-Player.prototype.roll =function() {
-  let rollR;
-  rollR = Math.ceil(Math.random() * 6);
-  return rollR;
-};
 
 
 Player.prototype.stay = function(){
