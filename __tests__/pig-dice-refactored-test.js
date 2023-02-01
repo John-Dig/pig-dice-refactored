@@ -17,7 +17,7 @@ describe('Player.prototype.roll()', () => {
   test('Should return 1,2,3,4,5, or 6', () => {
     const playerA = new Player();
     const playerRoll = playerA.roll();
-    expect(playerRoll).toBeGreaterThanOrEqual(10);
-    expect(playerRoll).toBeLessThan(0);
+    expect(playerRoll).toBeGreaterThanOrEqual(1);
+    expect(playerRoll).toBeLessThan(7);
   });
 });
